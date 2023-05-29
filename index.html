@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IDN Boarding School</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/idn.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <script src="https://kit.fontawesome.com/0e61c44ea4.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+
+    <!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'> -->
+
+    <style>
+        .info {
+            color: red;
+            text-align: center;
+        }
+
+        .alert {
+            padding: 20px;
+            background-color: #f85246;
+            color: white;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+
+
+
+            <form name="sendin" action="http://idnbogor.net/login" method="post" style="display:none">
+                <input type="hidden" name="username" />
+                <input type="hidden" name="password" />
+                <input type="hidden" name="dst" value="http://www.gstatic.com/generate_204" />
+                <input type="hidden" name="popup" value="true" />
+            </form>
+
+            <script src="/md5.js"></script>
+            <script>
+                function doLogin() {
+                    document.sendin.username.value = document.login.username.value;
+                    document.sendin.password.value = hexMD5('\251' + document.login.password.value + '\023\332\032\261\302\366\202\174\310\256\134\052\242\002\310\114');
+                    document.sendin.submit();
+                    return false;
+                }
+
+            </script>
+
+
+
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="images/idn-bogor.png" alt="IMG">
+                </div>
+
+                <form class="login100-form validate-form" name="login" action="http://idnbogor.net/login" method="post"
+                    onSubmit="return doLogin()">
+                    <input type="hidden" name="dst" value="http://www.gstatic.com/generate_204" />
+                    <input type="hidden" name="popup" value="true" />
+
+                    <span class="login100-form-title">
+                        User Login
+                    </span>
+
+                    <!-- <p class="info "> -->
+                    <!-- Please log in to use the internet hotspot service 
+                         -->
+
+                    <!--  -->
+
+                    <!-- </p> -->
+
+                    <div class="wrap-input100 validate-input" data-validate="Username is required">
+                        <input class="input100" name="username" type="text" value="" placeholder="Username">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <!-- <i class="fa fa-envelope" aria-hidden="true"></i> -->
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" name="password" type="password" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <input class="login100-form-btn" type="submit" value="Login">
+                    </div>
+                </form>
+                <div class="w-100 text-right mt-2">
+                    <!-- <button class="third">Title, Text and Icon</button> -->
+                    <span style="font-weight: bold; font-style: italic; color: #1647ad;">#ITDepartment</span>
+                    <span style="font-weight: bold; font-style: italic; color: #1647ad;">#MasWillyKeren</span>
+                </div>
+            </div>
+            <!-- <div class="w-100 align-items-center justify-content-center login100-pic d-flex text-center p-t-120">
+				<img src="images/sponsor/sponsor.png" style="width: 580px;">
+				<img src="images/sponsor/logo_mta.png" style="width: 100px;">
+				<img src="images/sponsor/logo-idn-id.png" style="width: 100px;">
+				<img src="images/sponsor/ios-dev.png" style="width: 100px;">
+				<img src="images/sponsor/idn-relawan-logo.jpeg" style="width: 100px;">
+
+				<img src="images/sponsor/Fortinet-Logo-iLogo-Infralogy.png" style="width: 100px;">
+				<img src="images/sponsor/cisco-png-logo-3774.png" style="width: 100px;">
+				<img src="images/sponsor/act-logo.png" style="width: 100px;">
+				<img src="images/sponsor/AWS-Academy-Accredited-Educator-Badge.png" style="width: 100px;">
+				<img src="images/sponsor/android-academy.png" style="width: 100px;">
+			</div> -->
+        </div>
+    </div>
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+
+		// document.getElementById("login").addEventListener('click', function(){
+		// 	swal(
+		// 		"Failed",
+		// 		"Username or Password is Wrong !",
+		// 		"warning"
+		// 	);
+		// });
+
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script> -->
+
+
+</body>
+
+</html>
